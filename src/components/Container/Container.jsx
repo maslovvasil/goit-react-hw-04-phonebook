@@ -1,11 +1,15 @@
-import ContactForm from "components/ContactForm/ContactForm";
+import PropTypes from 'prop-types';
+import styles from './Container.module.css';
 
-const Container = () => {
-    return ( 
-        <>
-        <ContactForm />
-        </>
-        );
+
+const Container = ({ children }) => {
+    return (
+        <div className={styles.container}>{ children}</div>
+    )
 }
- 
+
+Container.propTypes = {
+    children: PropTypes.array.isRequired,
+}
+
 export default Container;
